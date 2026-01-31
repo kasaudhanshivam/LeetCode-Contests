@@ -3,7 +3,7 @@ class Solution {
         if(i>=nums.length) return 0;
 
         String key = i + "," + last + "," + prev;
-        if(dp.containsKey(key)) dp.get(key);
+        if(dp.containsKey(key)) return dp.get(key);
         
         int ans = Integer.MIN_VALUE;
         if(last==-1 || (prev<nums[i] && (last & nums[i])!=0)){ // valid
